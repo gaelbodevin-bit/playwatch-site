@@ -6,6 +6,9 @@
 <title>Alternative à TV Time : récupère ton historique | Playwatch</title>
 <meta name="description" content="TV Time a fermé ? Playwatch importe ton export TV Time (séries, épisodes vus, films) et te prévient des nouveaux épisodes. Gratuit, sans pub, sur Android.">
 <link rel="canonical" href="https://playwatch.app/">
+<link rel="alternate" hreflang="fr" href="https://playwatch.app/">
+<link rel="alternate" hreflang="en" href="https://playwatch.app/en">
+<link rel="alternate" hreflang="x-default" href="https://playwatch.app/en">
 <meta name="theme-color" content="#0d0d11">
 <link rel="icon" type="image/png" href="icon-192.png">
 <meta property="og:type" content="website">
@@ -59,7 +62,8 @@ a{color:var(--ac)}
 header.top{display:flex;align-items:center;gap:10px;padding:18px 0}
 header.top img{width:34px;height:34px;border-radius:9px}
 header.top b{font-size:18px;letter-spacing:-.01em}
-header.top a.app{margin-left:auto;font-size:14px;font-weight:600;text-decoration:none}
+header.top a.lng{margin-left:auto;font-size:14px;font-weight:600;text-decoration:none;color:var(--mu)}
+header.top a.app{margin-left:14px;font-size:14px;font-weight:600;text-decoration:none}
 .hero{display:grid;gap:28px;align-items:center;padding:24px 0 40px}
 @media(min-width:820px){.hero{grid-template-columns:1.15fr .85fr}}
 .kicker{display:inline-block;background:#ffc83d1f;color:var(--ac);border:1px solid #ffc83d40;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:700}
@@ -117,6 +121,7 @@ footer a{color:var(--mu)}
   <header class="top">
     <img src="icon-192.png" alt="">
     <b>Playwatch</b>
+    <a class="lng" href="/en" hreflang="en" lang="en">English</a>
     <a class="app" href="https://gaelbodevin-bit.github.io/bobine/">Ouvrir l'app web →</a>
   </header>
 
@@ -214,7 +219,7 @@ footer a{color:var(--mu)}
   </footer>
 </div>
 <script>
-// Le jour où l'app est publique sur Google Play : passer PLAY_LIVE à true.
+// Le jour où l'app est publique sur Google Play : passer PLAY_LIVE à true (aussi dans /en/index.html).
 var PLAY_LIVE = false;
 var PLAY_URL = "https://play.google.com/store/apps/details?id=com.bluecellproduction.bobine&referrer=utm_source%3Dsite%26utm_medium%3Dalternative-tv-time";
 (function () {
