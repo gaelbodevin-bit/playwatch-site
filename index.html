@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alternative à TV Time : récupère ton historique | Playwatch</title>
+<meta name="description" content="TV Time a fermé ? Playwatch importe ton export TV Time (séries, épisodes vus, films) et te prévient des nouveaux épisodes. Gratuit, sans pub, sur Android.">
+<link rel="canonical" href="https://playwatch.app/">
+<meta name="theme-color" content="#0d0d11">
+<link rel="icon" type="image/png" href="icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Alternative à TV Time : récupère ton historique avec Playwatch">
+<meta property="og:description" content="Importe ton export TV Time, retrouve tes séries et tes épisodes vus, et sois prévenu de chaque nouvel épisode. Gratuit, sans pub.">
+<meta property="og:url" content="https://playwatch.app/">
+<meta property="og:image" content="https://playwatch.app/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Playwatch",
+  "alternateName": "Playwatch : séries, films, jeux",
+  "description": "Application de suivi de séries, de films et de jeux vidéo. Alternative à TV Time avec import de l'historique TV Time.",
+  "applicationCategory": "EntertainmentApplication",
+  "operatingSystem": "Android",
+  "inLanguage": "fr",
+  "url": "https://playwatch.app/",
+  "image": "https://playwatch.app/og.jpg",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "publisher": { "@type": "Organization", "name": "Blue Cell Production", "url": "https://playwatch.app/" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Comment importer mon historique TV Time dans Playwatch ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Dans Playwatch, va dans Profil, Paramètres, Importer mon historique, et choisis le fichier .zip de ton export TV Time (ou les fichiers .csv qu'il contient). Tes séries suivies, tes épisodes vus et tes films sont recréés automatiquement. L'import fait partie de Playwatch Premium (1,99 € une seule fois, à vie)." } },
+    { "@type": "Question", "name": "Je n'ai pas récupéré mon export TV Time avant la fermeture, que faire ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sans l'export, tes données TV Time ne sont plus accessibles. Dans Playwatch, ajoute tes séries puis utilise « Vu jusqu'ici » sur le dernier épisode que tu as vu : tous les épisodes précédents sont cochés d'un coup." } },
+    { "@type": "Question", "name": "Playwatch est-il gratuit ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui. Le suivi des séries, des films et des jeux est gratuit et sans publicité. Playwatch Premium coûte 1,99 € une seule fois, sans abonnement, et ajoute les notifications de nouveaux épisodes, l'import d'historique, les statistiques avancées, les thèmes, le calendrier abonnable et la rétro de l'année." } },
+    { "@type": "Question", "name": "Où sont stockées mes données ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Dans l'Union européenne (Google Firebase, région Paris). Playwatch ne contient ni publicité ni outil de mesure d'audience, et ne revend aucune donnée. Tu peux exporter tes données ou supprimer ton compte à tout moment." } },
+    { "@type": "Question", "name": "Playwatch est-il disponible sur iPhone ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Playwatch arrive d'abord sur Android, via Google Play. La version iPhone suivra." } }
+  ]
+}
+</script>
+<style>
+:root{--bg:#0d0d11;--s1:#16161c;--s2:#1f1f27;--line:#ffffff14;--tx:#f3f3f6;--mu:#a3a3b2;--ac:#ffc83d;--ac-tx:#1a1400}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 -apple-system,system-ui,"Segoe UI",Roboto,sans-serif}
+a{color:var(--ac)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header.top{display:flex;align-items:center;gap:10px;padding:18px 0}
+header.top img{width:34px;height:34px;border-radius:9px}
+header.top b{font-size:18px;letter-spacing:-.01em}
+header.top a.app{margin-left:auto;font-size:14px;font-weight:600;text-decoration:none}
+.hero{display:grid;gap:28px;align-items:center;padding:24px 0 40px}
+@media(min-width:820px){.hero{grid-template-columns:1.15fr .85fr}}
+.kicker{display:inline-block;background:#ffc83d1f;color:var(--ac);border:1px solid #ffc83d40;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:700}
+h1{font-size:clamp(32px,6vw,52px);line-height:1.05;letter-spacing:-.03em;margin:14px 0 14px}
+h1 em{font-style:normal;color:var(--ac)}
+.lead{font-size:18px;color:#d6d6de;margin:0 0 24px;max-width:36em}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:14px;padding:14px 20px;font-weight:700;text-decoration:none;font-size:16px}
+.btn.pri{background:var(--ac);color:var(--ac-tx)}
+.btn.soon{background:var(--s2);color:var(--tx);border:1px dashed #ffffff38;cursor:default}
+.btn svg{width:22px;height:22px}
+.btn.ghost{color:var(--tx);border:1px solid #ffffff2a}
+.note{color:var(--mu);font-size:13.5px;margin-top:12px}
+.phones{display:flex;gap:14px;justify-content:center;align-items:flex-start}
+.phones img{width:46%;max-width:230px;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:22px;box-shadow:0 20px 60px #0009;border:1px solid var(--line)}
+.phones img:nth-child(2){margin-top:34px}
+section{padding:36px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(24px,4vw,32px);letter-spacing:-.02em;margin:0 0 8px}
+.sub{color:var(--mu);margin:0 0 22px}
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:12px;counter-reset:s}
+@media(min-width:820px){.steps{grid-template-columns:repeat(4,1fr)}}
+.steps li{background:var(--s1);border:1px solid var(--line);border-radius:16px;padding:18px;counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--ac);color:var(--ac-tx);font-weight:800;margin-bottom:10px}
+.steps b{display:block;margin-bottom:4px}
+.steps span{color:var(--mu);font-size:14.5px}
+.grid{display:grid;gap:12px}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+.f{background:var(--s1);border:1px solid var(--line);border-radius:16px;padding:18px}
+.f b{display:block;font-size:16.5px;margin-bottom:4px}
+.f span{color:var(--mu);font-size:14.5px}
+.f .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;color:var(--ac-tx);background:var(--ac);border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:2px}
+.gallery{display:flex;gap:14px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory}
+.gallery img{width:220px;height:auto;aspect-ratio:9/16;object-fit:cover;flex:none;border-radius:18px;border:1px solid var(--line);scroll-snap-align:start}
+.price{display:grid;gap:12px}
+@media(min-width:720px){.price{grid-template-columns:1fr 1fr}}
+.price .f ul{margin:10px 0 0;padding-left:18px;color:#d6d6de;font-size:15px}
+.price .f.pre{border-color:#ffc83d66;background:linear-gradient(160deg,#2a2210,var(--s1))}
+.price .amt{font-size:30px;font-weight:800;letter-spacing:-.02em}
+.price .amt small{font-size:14px;color:var(--mu);font-weight:600}
+details{background:var(--s1);border:1px solid var(--line);border-radius:14px;padding:4px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:650;padding:12px 0;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--ac);font-weight:800}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 14px;color:#d6d6de}
+.final{text-align:center}
+.final .ctas{justify-content:center}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mu);font-size:13.5px}
+footer a{color:var(--mu)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <img src="icon-192.png" alt="">
+    <b>Playwatch</b>
+    <a class="app" href="https://gaelbodevin-bit.github.io/bobine/">Ouvrir l'app web →</a>
+  </header>
+
+  <div class="hero">
+    <div>
+      <span class="kicker">TV Time a fermé en juillet 2026</span>
+      <h1>L'alternative à TV Time qui <em>récupère ton historique</em></h1>
+      <p class="lead">Playwatch importe ton export TV Time : séries suivies, épisodes vus et films réapparaissent en quelques minutes. Tu retrouves ta liste « À voir », les prochains épisodes et une notification à chaque nouvelle sortie.</p>
+      <div class="ctas" data-play>
+        <!-- Rempli par le script ci-dessous : « Bientôt sur Google Play » tant que l'app n'est pas publique -->
+        <span class="btn soon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l9.5-9.7L3.6 2.3zm10.9 11.1 2.6 2.6-11.2 6.4 8.6-9zm3.6-4 2.8 1.6c.8.5.8 1.6 0 2.1l-2.9 1.6-2.8-2.7 2.9-2.6zM5.9 1.6l11.2 6.4-2.6 2.6-8.6-9z"/></svg>Bientôt sur Google Play</span>
+      </div>
+      <p class="note">Gratuit, sans publicité, données hébergées en Europe. Android d'abord, iPhone ensuite.</p>
+    </div>
+    <div class="phones">
+      <img src="playwatch-series.webp" alt="Playwatch : la liste des séries en cours avec les prochains épisodes" width="720" height="1280">
+      <img src="playwatch-episodes.webp" alt="Playwatch : cocher ses épisodes vus saison par saison" width="720" height="1280">
+    </div>
+  </div>
+
+  <section id="importer">
+    <h2>Importer ton historique TV Time</h2>
+    <p class="sub">Tu as demandé ton export de données à TV Time avant la fermeture (le fichier .zip reçu par e-mail) ? Playwatch le lit directement.</p>
+    <ol class="steps">
+      <li><b>Installe Playwatch</b><span>Depuis Google Play, puis crée ton compte avec Google ou ton e-mail.</span></li>
+      <li><b>Ouvre l'import</b><span>Profil → Paramètres → « Importer mon historique ».</span></li>
+      <li><b>Choisis ton export</b><span>Le .zip TV Time tel quel, ou les fichiers .csv qu'il contient.</span></li>
+      <li><b>C'est prêt</b><span>Séries, épisodes vus et films sont recréés avec leurs affiches et leurs prochains épisodes.</span></li>
+    </ol>
+    <p class="note">L'import fait partie de Playwatch Premium (1,99 € une seule fois). Playwatch lit aussi les exports Binge Boxd.</p>
+  </section>
+
+  <section>
+    <h2>Tout ce que tu avais sur TV Time</h2>
+    <p class="sub">Et quelques bonus que tu n'avais pas.</p>
+    <div class="grid">
+      <div class="f"><b>Suivi épisode par épisode</b><span>Coche d'un geste, « Vu jusqu'ici » pour rattraper une saison entière, progression par série.</span></div>
+      <div class="f"><b>Prochains épisodes et « À venir »</b><span>La date de chaque épisode à venir de tes séries, et les sorties ciné et VOD des films de ta liste.</span></div>
+      <div class="f"><b>Notifications de sortie<span class="tag">PREMIUM</span></b><span>Une alerte dès qu'un nouvel épisode de tes séries est disponible.</span></div>
+      <div class="f"><b>Films vus et à voir</b><span>Ta liste de films, tes notes, et la plateforme où les regarder.</span></div>
+      <div class="f"><b>Dernières sorties : animés, séries, films</b><span>Les épisodes sortis cette semaine, façon guide télé, avec les animés japonais à part.</span></div>
+      <div class="f"><b>Mode sans spoiler</b><span>Titres, images et résumés des épisodes que tu n'as pas vus restent cachés.</span></div>
+      <div class="f"><b>Les jeux vidéo aussi</b><span>En cours, à jouer, terminés, heures de jeu, et la date de sortie des jeux que tu attends.</span></div>
+      <div class="f"><b>Statistiques et rétro de l'année<span class="tag">PREMIUM</span></b><span>Heures devant l'écran, séries de l'année, image à partager.</span></div>
+      <div class="f"><b>Calendrier abonnable<span class="tag">PREMIUM</span></b><span>Les sorties de ta liste directement dans Google Agenda.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>En images</h2>
+    <div class="gallery">
+      <img src="playwatch-series.webp" alt="Séries en cours" loading="lazy" width="720" height="1280">
+      <img src="playwatch-episodes.webp" alt="Épisodes cochés" loading="lazy" width="720" height="1280">
+      <img src="playwatch-a-venir.webp" alt="À venir : les prochains épisodes de tes séries" loading="lazy" width="720" height="1280">
+      <img src="playwatch-films.webp" alt="Films à voir et vus" loading="lazy" width="720" height="1280">
+      <img src="playwatch-jeux.webp" alt="Jeux vidéo" loading="lazy" width="720" height="1280">
+    </div>
+  </section>
+
+  <section>
+    <h2>Gratuit, avec un Premium à vie</h2>
+    <p class="sub">Pas d'abonnement, pas de publicité.</p>
+    <div class="price">
+      <div class="f"><div class="amt">0 € <small>pour toujours</small></div>
+        <ul><li>Séries, films et jeux en illimité</li><li>Épisodes vus, prochains épisodes, « À venir »</li><li>Dernières sorties animés, séries, films</li><li>Mode sans spoiler et statistiques</li><li>Synchronisation entre tes appareils</li></ul></div>
+      <div class="f pre"><div class="amt">1,99 € <small>une seule fois</small></div>
+        <ul><li>Import de ton historique TV Time</li><li>Notifications de nouveaux épisodes et de sorties</li><li>Statistiques avancées et rétro à partager</li><li>Calendrier abonnable</li><li>Thèmes et couleurs</li></ul></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>Questions fréquentes</h2>
+    <details><summary>Je n'ai pas récupéré mon export TV Time avant la fermeture, que faire ?</summary>
+      <p>Sans l'export, tes données TV Time ne sont plus accessibles. Dans Playwatch, ajoute tes séries puis utilise « Vu jusqu'ici » sur le dernier épisode que tu as vu : tous les épisodes précédents sont cochés d'un coup.</p></details>
+    <details><summary>Quels fichiers de l'export TV Time sont acceptés ?</summary>
+      <p>Le fichier .zip complet, tel que TV Time l'a envoyé, ou les fichiers .csv qu'il contient. Playwatch reconnaît les différentes versions de l'export.</p></details>
+    <details><summary>Playwatch est-il gratuit ?</summary>
+      <p>Oui : le suivi des séries, des films et des jeux est gratuit et sans publicité. Premium coûte 1,99 € une seule fois, sans abonnement, et ajoute l'import d'historique, les notifications, les statistiques avancées, le calendrier abonnable et les thèmes.</p></details>
+    <details><summary>Où sont stockées mes données ?</summary>
+      <p>Dans l'Union européenne (Google Firebase, région Paris). Pas de publicité, pas de mesure d'audience, aucune revente. Tu peux exporter tes données ou supprimer ton compte à tout moment. <a href="https://gaelbodevin-bit.github.io/bobine/privacy.html">Politique de confidentialité</a>.</p></details>
+    <details><summary>Et sur iPhone ?</summary>
+      <p>Playwatch arrive d'abord sur Android, via Google Play. La version iPhone suivra.</p></details>
+  </section>
+
+  <section class="final">
+    <h2>Reprends tes séries là où tu les avais laissées</h2>
+    <p class="sub">Importe ton historique TV Time et ne rate plus aucun épisode.</p>
+    <div class="ctas" data-play></div>
+  </section>
+
+  <footer>
+    Playwatch est édité par <a href="https://playwatch.app/">Blue Cell Production</a> (Choussy, France). TV Time est une marque de son propriétaire ; Playwatch n'y est pas affilié.
+    · <a href="https://gaelbodevin-bit.github.io/bobine/privacy.html">Confidentialité</a> · <a href="mailto:bluecellproduction@gmail.com">Contact</a>
+    <br>Données de films et séries : The Movie Database (TMDB). Données de jeux : RAWG.
+  </footer>
+</div>
+<script>
+// Le jour où l'app est publique sur Google Play : passer PLAY_LIVE à true.
+var PLAY_LIVE = false;
+var PLAY_URL = "https://play.google.com/store/apps/details?id=com.bluecellproduction.bobine&referrer=utm_source%3Dsite%26utm_medium%3Dalternative-tv-time";
+(function () {
+  var icon = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l9.5-9.7L3.6 2.3zm10.9 11.1 2.6 2.6-11.2 6.4 8.6-9zm3.6-4 2.8 1.6c.8.5.8 1.6 0 2.1l-2.9 1.6-2.8-2.7 2.9-2.6zM5.9 1.6l11.2 6.4-2.6 2.6-8.6-9z"/></svg>';
+  var html = PLAY_LIVE
+    ? '<a class="btn pri" href="' + PLAY_URL + '">' + icon + 'Télécharger sur Google Play</a>'
+    : '<span class="btn soon">' + icon + 'Bientôt sur Google Play</span><a class="btn ghost" href="https://gaelbodevin-bit.github.io/bobine/">Essayer la version web</a>';
+  var els = document.querySelectorAll("[data-play]");
+  for (var i = 0; i < els.length; i++) els[i].innerHTML = html;
+})();
+</script>
+</body>
+</html>

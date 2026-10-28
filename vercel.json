@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/alternative-tv-time", "destination": "/", "permanent": true },
+    { "source": "/alternative-tv-time/:path*", "destination": "/:path*", "permanent": true },
+    { "source": "/app", "destination": "https://gaelbodevin-bit.github.io/bobine/", "permanent": false },
+    { "source": "/confidentialite", "destination": "https://gaelbodevin-bit.github.io/bobine/privacy.html", "permanent": false }
+  ],
+  "headers": [
+    { "source": "/(.*)\\.(webp|jpg|png)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }] }
+  ]
+}

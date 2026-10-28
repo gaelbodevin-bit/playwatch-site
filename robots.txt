@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://playwatch.app/sitemap.xml
