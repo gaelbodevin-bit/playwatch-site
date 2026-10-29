@@ -45,6 +45,8 @@
       "acceptedAnswer": { "@type": "Answer", "text": "Sans l'export, tes données TV Time ne sont plus accessibles. Dans Playwatch, ajoute tes séries puis utilise « Vu jusqu'ici » sur le dernier épisode que tu as vu : tous les épisodes précédents sont cochés d'un coup." } },
     { "@type": "Question", "name": "Playwatch est-il gratuit ?",
       "acceptedAnswer": { "@type": "Answer", "text": "Oui. Le suivi des séries, des films et des jeux est gratuit et sans publicité. Playwatch Premium coûte 1,99 € une seule fois, sans abonnement, et ajoute les notifications de nouveaux épisodes, l'import d'historique, les statistiques avancées, les thèmes, le calendrier abonnable et la rétro de l'année." } },
+    { "@type": "Question", "name": "Playwatch gère-t-il les jeux vidéo ?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Oui, et gratuitement. Ajoute tes jeux depuis l'onglet Découvrir et range-les en cours, à jouer, terminés ou abandonnés, avec la plateforme, les heures de jeu et ta note. Playwatch affiche la date de sortie des jeux que tu attends et les signale dès qu'ils sortent. Les données de jeux viennent de RAWG." } },
     { "@type": "Question", "name": "Où sont stockées mes données ?",
       "acceptedAnswer": { "@type": "Answer", "text": "Dans l'Union européenne (Google Firebase, région Paris). Playwatch ne contient ni publicité ni outil de mesure d'audience, et ne revend aucune donnée. Tu peux exporter tes données ou supprimer ton compte à tout moment." } }
   ]
@@ -112,6 +114,17 @@ details p{margin:0 0 14px;color:#d6d6de}
 .final .ctas{justify-content:center}
 footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mu);font-size:13.5px}
 footer a{color:var(--mu)}
+.hl{display:inline-flex;align-items:center;gap:10px;margin-top:16px;padding:9px 16px 9px 10px;border-radius:16px;background:var(--s1);border:1px solid #ffc83d55;color:var(--tx);text-decoration:none;font-size:14.5px;font-weight:600}
+.hl b,.tag.nw{background:var(--ac);color:var(--ac-tx);font-size:11px;font-weight:800;letter-spacing:.04em;border-radius:6px;padding:2px 7px}
+.hl svg{width:18px;height:18px;color:var(--ac)}
+section.games{border-top:1px solid #ffc83d40;background:radial-gradient(120% 80% at 85% 30%,#ffc83d14,transparent 60%)}
+.gwrap{display:grid;gap:30px;align-items:center}
+@media(min-width:820px){.gwrap{grid-template-columns:1.35fr .65fr}}
+.gwrap h2{font-size:clamp(28px,5vw,40px);line-height:1.1;margin:12px 0 10px}
+.gwrap h2 em{font-style:normal;color:var(--ac)}
+.gwrap>img{width:100%;max-width:270px;justify-self:center;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:22px;box-shadow:0 20px 60px #0009;border:1px solid var(--line)}
+@media(min-width:640px){.grid.g2{grid-template-columns:repeat(2,1fr)}}
+.f .ic{display:block;width:26px;height:26px;color:var(--ac);margin-bottom:8px}
 </style>
 </head>
 <body>
@@ -133,6 +146,7 @@ footer a{color:var(--mu)}
         <span class="btn soon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l9.5-9.7L3.6 2.3zm10.9 11.1 2.6 2.6-11.2 6.4 8.6-9zm3.6-4 2.8 1.6c.8.5.8 1.6 0 2.1l-2.9 1.6-2.8-2.7 2.9-2.6zM5.9 1.6l11.2 6.4-2.6 2.6-8.6-9z"/></svg>Bientôt sur Google Play</span>
       </div>
       <p class="note">Gratuit, sans publicité, données hébergées en Europe.</p>
+      <a class="hl" href="#jeux"><b>NOUVEAU</b><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9h12a4 4 0 0 1 3.5 6l-1 1.5a2.5 2.5 0 0 1-4 .3L15 15H9l-1.5 1.8a2.5 2.5 0 0 1-4-.3l-1-1.5A4 4 0 0 1 6 9zM8 11v3M6.5 12.5h3"/></svg>Tes jeux vidéo aussi, dans la même appli →</a>
     </div>
     <div class="phones">
       <img src="playwatch-series.webp" alt="Playwatch : la liste des séries en cours avec les prochains épisodes" width="720" height="1280">
@@ -152,6 +166,25 @@ footer a{color:var(--mu)}
     <p class="note">L'import fait partie de Playwatch Premium (1,99 € une seule fois). Playwatch lit aussi les exports Binge Boxd.</p>
   </section>
 
+  <section id="jeux" class="games">
+    <div class="gwrap">
+      <div>
+        <span class="kicker">Nouveau dans Playwatch</span>
+        <h2>Tes <em>jeux vidéo</em>, au même endroit que tes séries</h2>
+        <p class="sub">Un sélecteur en haut de l'appli passe des films et séries aux jeux. Ta ludothèque, les sorties que tu attends et ce que tu as fini, gratuitement comme le reste. Tu ne joues pas ? Masque les jeux dans les paramètres.</p>
+        <div class="grid g2">
+        <div class="f"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v14H4zM4 10h16M9 5v14"/></svg><b>Ta ludothèque en 4 statuts</b><span>En cours, À jouer, Terminés, Abandonnés, avec la plateforme, les heures de jeu et ta note.</span></div>
+        <div class="f"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0"/></svg><b>« SORTI ! » le jour J</b><span>Les jeux attendus de ta liste « À jouer » sont signalés dans l'appli dès leur sortie.</span></div>
+        <div class="f"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4zM4 10h16M8 3v5M16 3v5"/></svg><b>À venir</b><span>Les dates de sortie des jeux de ta liste, et les jeux les plus attendus du moment.</span></div>
+        <div class="f"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4a7 7 0 1 0 0 14 7 7 0 1 0 0-14zM20 20l-4-4"/></svg><b>Découvrir</b><span>Tendances, les plus joués, les mieux notés, les jeux de l'année et des suggestions selon tes genres préférés.</span></div>
+        <div class="f"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg><b>Tes stats de joueur</b><span>Jeux en cours, jeux terminés et heures de jeu dans ton profil.</span></div>
+        <div class="f"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 4h8v5a4 4 0 0 1-8 0zM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 20h8"/></svg><b>Badges à débloquer</b><span>Joueur, Ludothèque, Sans compter, Multiplateforme : du bronze au platine.</span></div>
+        </div>
+      </div>
+      <img src="playwatch-jeux.webp" alt="Playwatch : la ludothèque de jeux vidéo, jeux en cours, à jouer et terminés" loading="lazy" width="720" height="1280">
+    </div>
+  </section>
+
   <section>
     <h2>Tout ce que tu avais sur TV Time</h2>
     <p class="sub">Et quelques bonus que tu n'avais pas.</p>
@@ -162,7 +195,7 @@ footer a{color:var(--mu)}
       <div class="f"><b>Films vus et à voir</b><span>Ta liste de films, tes notes, et la plateforme où les regarder.</span></div>
       <div class="f"><b>Dernières sorties : animés, séries, films</b><span>Les épisodes sortis cette semaine, façon guide télé, avec les animés japonais à part.</span></div>
       <div class="f"><b>Mode sans spoiler</b><span>Titres, images et résumés des épisodes que tu n'as pas vus restent cachés.</span></div>
-      <div class="f"><b>Les jeux vidéo aussi</b><span>En cours, à jouer, terminés, heures de jeu, et la date de sortie des jeux que tu attends.</span></div>
+      <div class="f"><b>Les jeux vidéo aussi<span class="tag nw">NOUVEAU</span></b><span>En cours, à jouer, terminés, heures de jeu, et la date de sortie des jeux que tu attends. <a href="#jeux">En savoir plus</a></span></div>
       <div class="f"><b>Statistiques et rétro de l'année<span class="tag">PREMIUM</span></b><span>Heures devant l'écran, séries de l'année, image à partager.</span></div>
       <div class="f"><b>Calendrier abonnable<span class="tag">PREMIUM</span></b><span>Les sorties de ta liste directement dans Google Agenda.</span></div>
     </div>
@@ -184,7 +217,7 @@ footer a{color:var(--mu)}
     <p class="sub">Pas d'abonnement, pas de publicité.</p>
     <div class="price">
       <div class="f"><div class="amt">0 € <small>pour toujours</small></div>
-        <ul><li>Séries, films et jeux en illimité</li><li>Épisodes vus, prochains épisodes, «&nbsp;À venir&nbsp;»</li><li>Dernières sorties animés, séries, films</li><li>Mode sans spoiler et statistiques</li><li>Synchronisation entre tes appareils</li></ul></div>
+        <ul><li>Séries, films et jeux vidéo en illimité</li><li>Épisodes vus, prochains épisodes, «&nbsp;À venir&nbsp;»</li><li>Dernières sorties animés, séries, films</li><li>Mode sans spoiler et statistiques</li><li>Synchronisation entre tes appareils</li></ul></div>
       <div class="f pre"><div class="amt">1,99 € <small>une seule fois</small></div>
         <ul><li>Import de ton historique TV Time</li><li>Notifications de nouveaux épisodes et de sorties</li><li>Statistiques avancées et rétro à partager</li><li>Calendrier abonnable</li><li>Thèmes et couleurs</li></ul></div>
     </div>
@@ -198,6 +231,8 @@ footer a{color:var(--mu)}
       <p>Le fichier .zip complet, tel que TV Time l'a envoyé, ou les fichiers .csv qu'il contient. Playwatch reconnaît les différentes versions de l'export.</p></details>
     <details><summary>Playwatch est-il gratuit ?</summary>
       <p>Oui : le suivi des séries, des films et des jeux est gratuit et sans publicité. Premium coûte 1,99 € une seule fois, sans abonnement, et ajoute l'import d'historique, les notifications, les statistiques avancées, le calendrier abonnable et les thèmes.</p></details>
+    <details><summary>Playwatch gère-t-il les jeux vidéo ?</summary>
+      <p>Oui, et gratuitement. Ajoute tes jeux depuis l'onglet Découvrir et range-les en cours, à jouer, terminés ou abandonnés, avec la plateforme, les heures de jeu et ta note. Playwatch affiche la date de sortie des jeux que tu attends et les signale dès qu'ils sortent. Les données de jeux viennent de RAWG.</p></details>
     <details><summary>Où sont stockées mes données ?</summary>
       <p>Dans l'Union européenne (Google Firebase, région Paris). Pas de publicité, pas de mesure d'audience, aucune revente. Tu peux exporter tes données ou supprimer ton compte à tout moment. <a href="https://gaelbodevin-bit.github.io/bobine/privacy.html">Politique de confidentialité</a>.</p></details>
   </section>
