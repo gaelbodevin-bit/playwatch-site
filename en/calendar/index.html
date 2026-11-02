@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TV Show Calendar for Google Calendar: track release dates | Playwatch</title>
+<meta name="description" content="Add the next episodes of your TV shows, theatrical and streaming releases of your movies, and the games you're waiting for to Google Calendar or your phone's calendar. Updates itself.">
+<link rel="canonical" href="https://playwatch.app/en/calendar">
+<link rel="alternate" hreflang="fr" href="https://playwatch.app/calendrier">
+<link rel="alternate" hreflang="en" href="https://playwatch.app/en/calendar">
+<link rel="alternate" hreflang="x-default" href="https://playwatch.app/en/calendar">
+<meta name="theme-color" content="#0d0d11">
+<link rel="icon" type="image/png" href="/icon-192.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Your shows' release dates, in your calendar · Playwatch">
+<meta property="og:description" content="Add the next episodes of your TV shows, theatrical and streaming releases of your movies, and the games you're waiting for to Google Calendar or your phone's calendar. Updates itself.">
+<meta property="og:url" content="https://playwatch.app/en/calendar">
+<meta property="og:image" content="https://playwatch.app/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Which calendar apps work with the Playwatch calendar?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Google Calendar (so the calendar on most Android phones, Samsung included), Outlook, and any calendar app that supports subscribing to an iCal (.ics) link."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How long until a new release shows up?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Playwatch refreshes the calendar several times a day. Google Calendar then re-reads subscriptions on its own schedule, which can add a few hours of delay."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is the calendar free?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It's part of Playwatch Premium, a one-time €1.99 with no subscription. Premium also adds new-episode notifications, TV Time history import, advanced stats and themes."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can anyone else see my calendar?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Only if you give them the link. It isn't published anywhere, and you can replace it with a new link from Playwatch's settings."
+   }
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Playwatch", "item": "https://playwatch.app/en"}, {"@type": "ListItem", "position": 2, "name": "TV show calendar", "item": "https://playwatch.app/en/calendar"}]}
+</script>
+<style>
+:root{--bg:#0d0d11;--s1:#16161c;--s2:#1f1f27;--line:#ffffff14;--tx:#f3f3f6;--mu:#a3a3b2;--ac:#ffc83d;--ac-tx:#1a1400}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 -apple-system,system-ui,"Segoe UI",Roboto,sans-serif}
+a{color:var(--ac)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header.top{display:flex;align-items:center;gap:10px;padding:18px 0}
+header.top img{width:34px;height:34px;border-radius:9px}
+header.top b{font-size:18px;letter-spacing:-.01em}
+header.top a.lng{margin-left:auto;font-size:14px;font-weight:600;text-decoration:none;color:var(--mu)}
+header.top a.app{margin-left:14px;font-size:14px;font-weight:600;text-decoration:none}
+.hero{display:grid;gap:28px;align-items:center;padding:24px 0 40px}
+@media(min-width:820px){.hero{grid-template-columns:1.15fr .85fr}}
+.kicker{display:inline-block;background:#ffc83d1f;color:var(--ac);border:1px solid #ffc83d40;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:700}
+h1{font-size:clamp(32px,6vw,52px);line-height:1.05;letter-spacing:-.03em;margin:14px 0 14px}
+h1 em{font-style:normal;color:var(--ac)}
+.lead{font-size:18px;color:#d6d6de;margin:0 0 24px;max-width:36em}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;border-radius:14px;padding:14px 20px;font-weight:700;text-decoration:none;font-size:16px}
+.btn.pri{background:var(--ac);color:var(--ac-tx)}
+.btn.soon{background:var(--s2);color:var(--tx);border:1px dashed #ffffff38;cursor:default}
+.btn svg{width:22px;height:22px}
+.btn.ghost{color:var(--tx);border:1px solid #ffffff2a}
+.note{color:var(--mu);font-size:13.5px;margin-top:12px}
+.phones{display:flex;gap:14px;justify-content:center;align-items:flex-start}
+.phones img{width:46%;max-width:230px;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:22px;box-shadow:0 20px 60px #0009;border:1px solid var(--line)}
+.phones img:nth-child(2){margin-top:34px}
+section{padding:36px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(24px,4vw,32px);letter-spacing:-.02em;margin:0 0 8px}
+.sub{color:var(--mu);margin:0 0 22px}
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:12px;counter-reset:s}
+@media(min-width:820px){.steps{grid-template-columns:repeat(4,1fr)}}
+.steps li{background:var(--s1);border:1px solid var(--line);border-radius:16px;padding:18px;counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--ac);color:var(--ac-tx);font-weight:800;margin-bottom:10px}
+.steps b{display:block;margin-bottom:4px}
+.steps span{color:var(--mu);font-size:14.5px}
+.grid{display:grid;gap:12px}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+.f{background:var(--s1);border:1px solid var(--line);border-radius:16px;padding:18px}
+.f b{display:block;font-size:16.5px;margin-bottom:4px}
+.f span{color:var(--mu);font-size:14.5px}
+.f .tag{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.04em;color:var(--ac-tx);background:var(--ac);border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:2px}
+.gallery{display:flex;gap:14px;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x mandatory}
+.gallery img{width:220px;height:auto;aspect-ratio:9/16;object-fit:cover;flex:none;border-radius:18px;border:1px solid var(--line);scroll-snap-align:start}
+.price{display:grid;gap:12px}
+@media(min-width:720px){.price{grid-template-columns:1fr 1fr}}
+.price .f ul{margin:10px 0 0;padding-left:18px;color:#d6d6de;font-size:15px}
+.price .f.pre{border-color:#ffc83d66;background:linear-gradient(160deg,#2a2210,var(--s1))}
+.price .amt{font-size:30px;font-weight:800;letter-spacing:-.02em}
+.price .amt small{font-size:14px;color:var(--mu);font-weight:600}
+details{background:var(--s1);border:1px solid var(--line);border-radius:14px;padding:4px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:650;padding:12px 0;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";float:right;color:var(--ac);font-weight:800}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 14px;color:#d6d6de}
+.final{text-align:center}
+.final .ctas{justify-content:center}
+footer{border-top:1px solid var(--line);padding:26px 0 40px;color:var(--mu);font-size:13.5px}
+footer a{color:var(--mu)}
+.hl{display:inline-flex;align-items:center;gap:10px;margin-top:16px;padding:9px 16px 9px 10px;border-radius:16px;background:var(--s1);border:1px solid #ffc83d55;color:var(--tx);text-decoration:none;font-size:14.5px;font-weight:600}
+.hl b,.tag.nw{background:var(--ac);color:var(--ac-tx);font-size:11px;font-weight:800;letter-spacing:.04em;border-radius:6px;padding:2px 7px}
+.hl svg{width:18px;height:18px;color:var(--ac)}
+section.games{border-top:1px solid #ffc83d40;background:radial-gradient(120% 80% at 85% 30%,#ffc83d14,transparent 60%)}
+.gwrap{display:grid;gap:30px;align-items:center}
+@media(min-width:820px){.gwrap{grid-template-columns:1.35fr .65fr}}
+.gwrap h2{font-size:clamp(28px,5vw,40px);line-height:1.1;margin:12px 0 10px}
+.gwrap h2 em{font-style:normal;color:var(--ac)}
+.gwrap>img{width:100%;max-width:270px;justify-self:center;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:22px;box-shadow:0 20px 60px #0009;border:1px solid var(--line)}
+@media(min-width:640px){.grid.g2{grid-template-columns:repeat(2,1fr)}}
+.f .ic{display:block;width:26px;height:26px;color:var(--ac);margin-bottom:8px}
+.crumb{font-size:14px;color:var(--mu);margin:4px 0 0}.crumb a{color:var(--mu)}
+.agenda{background:var(--s1);border:1px solid var(--line);border-radius:22px;padding:18px;box-shadow:0 20px 60px #0009;max-width:400px;justify-self:center;width:100%}
+.agenda .ah{display:flex;align-items:center;gap:10px;font-weight:700;margin-bottom:6px}
+.agenda .ah svg{width:22px;height:22px;color:var(--ac)}
+.agenda .ah small{margin-left:auto;font-weight:600;color:var(--mu);font-size:12px;white-space:nowrap}
+@media(max-width:480px){.agenda .ah small{display:none}}
+.agenda .day{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--mu);margin:14px 0 6px}
+.agenda .ev{display:flex;gap:10px;align-items:flex-start;background:var(--s2);border-radius:12px;padding:10px 12px;margin-bottom:6px;border-left:4px solid var(--c,#ffc83d)}
+.agenda .ev b{display:block;font-size:14.5px;line-height:1.3}
+.agenda .ev span{font-size:12.5px;color:var(--mu)}
+.agenda .ev i{font-style:normal;font-size:16px;line-height:1.3}
+.agenda .ex{font-size:12px;color:var(--mu2,#6d6d7c);text-align:center;margin-top:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a href="/en" style="display:flex;align-items:center;gap:10px;color:inherit;text-decoration:none"><img src="/icon-192.png" alt=""><b>Playwatch</b></a>
+    <a class="lng" href="/calendrier" hreflang="fr" lang="fr">Français</a>
+    <a class="app" href="https://gaelbodevin-bit.github.io/bobine/">Open the web app →</a>
+  </header>
+
+  <div class="hero">
+    <div>
+      <span class="kicker">TV show calendar</span>
+      <h1>Your shows' release dates, <em>in your calendar</em></h1>
+      <p class="lead">Playwatch builds a calendar just for you with the next episodes of your TV shows, theatrical and streaming releases of the movies on your list, and the games you're waiting for. Add it once to Google Calendar or your phone's calendar: it updates itself.</p>
+      <div class="ctas"><a class="btn pri" href="https://play.google.com/store/apps/details?id=com.bluecellproduction.bobine&referrer=utm_source%3Dsite%26utm_medium%3Dcalendar-en"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l9.5-9.7L3.6 2.3zm10.9 11.1 2.6 2.6-11.2 6.4 8.6-9zm3.6-4 2.8 1.6c.8.5.8 1.6 0 2.1l-2.9 1.6-2.8-2.7 2.9-2.6zM5.9 1.6l11.2 6.4-2.6 2.6-8.6-9z"/></svg>Get it on Google Play</a><a class="btn ghost" href="https://gaelbodevin-bit.github.io/bobine/">Web version</a></div>
+      <p class="note">The calendar is part of Playwatch Premium: a one-time €1.99, no subscription.</p>
+    </div>
+    <div class="agenda" role="img" aria-label="Example calendar">
+      <div class="ah"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v14H4zM4 10h16M8 3v5M16 3v5"/></svg>My Playwatch calendar<small>updates itself</small></div>
+      <div class="day">Tuesday</div><div class="ev" style="--c:#ffc83d"><div><b>Tulsa King — S04E02</b><span>Paramount+</span></div></div><div class="ev" style="--c:#ffc83d"><div><b>INVINCIBLE — S04E05</b><span>Prime Video · ✓ Already watched</span></div></div><div class="day">Thursday</div><div class="ev" style="--c:#8fd3ff"><i>🎬</i><div><b>Dune: Part Three — in theaters</b><span>Movie on your watchlist</span></div></div><div class="day">Friday</div><div class="ev" style="--c:#3ddc97"><i>🎮</i><div><b>Marvel's Wolverine — release</b><span>Game in your backlog</span></div></div><div class="ev" style="--c:#ffc83d"><div><b>The Apothecary Diaries — S03E04</b><span>Crunchyroll</span></div></div>
+      <div class="ex">Example calendar</div>
+    </div>
+  </div>
+
+  <section>
+    <h2>How to add it</h2>
+    <p class="sub">Two minutes, once.</p>
+    <ol class="steps"><li><b>Fill your list</b><span>Add your shows, the movies you want to see and the games you're waiting for in Playwatch.</span></li><li><b>Create your calendar</b><span>Profile&nbsp;→ Settings&nbsp;→ Calendar&nbsp;→ “Create my calendar”.</span></li><li><b>Add it to your calendar app</b><span>“Add to Google Calendar” in one tap, or “Copy link” for Outlook and other calendar apps.</span></li><li><b>That's it</b><span>Every new show you follow and every newly announced date lands in your calendar automatically.</span></li></ol>
+  </section>
+
+  <section>
+    <h2>What's in your calendar</h2>
+    <p class="sub">Only what you care about: releases from your list, nothing else.</p>
+    <div class="grid"><div class="f"><b>Episodes of your shows</b><span>Every episode with its season, number and network, from last month up to 4 months ahead. The ones you've seen are marked “✓ Already watched”.</span></div><div class="f"><b>Movies on your list</b><span>Theatrical and streaming releases, using your country's dates.</span></div><div class="f"><b>Games you're waiting for</b><span>Release dates for the games in your backlog.</span></div><div class="f"><b>Spoiler-free</b><span>With spoiler-free mode on, titles and synopses of episodes you haven't seen stay hidden in your calendar too.</span></div><div class="f"><b>Always up to date</b><span>A date moves, an episode is added, you start a new show: your calendar follows without you doing anything.</span></div><div class="f"><b>A private link</b><span>Your calendar has a secret address. You can create a new one anytime and the old one stops working right away.</span></div></div>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <details><summary>Which calendar apps work with the Playwatch calendar?</summary>
+      <p>Google Calendar (so the calendar on most Android phones, Samsung included), Outlook, and any calendar app that supports subscribing to an iCal (.ics) link.</p></details>
+    <details><summary>How long until a new release shows up?</summary>
+      <p>Playwatch refreshes the calendar several times a day. Google Calendar then re-reads subscriptions on its own schedule, which can add a few hours of delay.</p></details>
+    <details><summary>Is the calendar free?</summary>
+      <p>It's part of Playwatch Premium, a one-time €1.99 with no subscription. Premium also adds new-episode notifications, TV Time history import, advanced stats and themes.</p></details>
+    <details><summary>Can anyone else see my calendar?</summary>
+      <p>Only if you give them the link. It isn't published anywhere, and you can replace it with a new link from Playwatch's settings.</p></details>
+    
+  </section>
+
+  <section class="final">
+    <h2>Never miss a release again</h2>
+    <p class="sub">Shows, movies and video games: it all lands in your calendar.</p>
+    <div class="ctas"><a class="btn pri" href="https://play.google.com/store/apps/details?id=com.bluecellproduction.bobine&referrer=utm_source%3Dsite%26utm_medium%3Dcalendar-en"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3c-.3.3-.4.7-.4 1.2v17c0 .5.1.9.4 1.2l9.5-9.7L3.6 2.3zm10.9 11.1 2.6 2.6-11.2 6.4 8.6-9zm3.6-4 2.8 1.6c.8.5.8 1.6 0 2.1l-2.9 1.6-2.8-2.7 2.9-2.6zM5.9 1.6l11.2 6.4-2.6 2.6-8.6-9z"/></svg>Get it on Google Play</a><a class="btn ghost" href="https://gaelbodevin-bit.github.io/bobine/">Web version</a></div>
+    <p class="crumb" style="margin-top:22px"><a href="/en">← Everything about Playwatch</a></p>
+  </section>
+
+  <footer>
+    Playwatch is published by <a href="https://playwatch.app/en">Blue Cell Production</a> (Choussy, France). Google Calendar is a trademark of Google LLC; Playwatch is not affiliated with it.
+    · <a href="https://gaelbodevin-bit.github.io/bobine/privacy-en.html">Privacy</a> · <a href="mailto:bluecellproduction@gmail.com">Contact</a>
+    <br>Movie and TV data: The Movie Database (TMDB). Game data: RAWG.
+  </footer>
+</div>
+</body>
+</html>
