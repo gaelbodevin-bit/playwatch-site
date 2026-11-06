@@ -128,6 +128,10 @@ section.games{border-top:1px solid #ffc83d40;background:radial-gradient(120% 80%
 .gwrap>img{width:100%;max-width:270px;justify-self:center;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:22px;box-shadow:0 20px 60px #0009;border:1px solid var(--line)}
 @media(min-width:640px){.grid.g2{grid-template-columns:repeat(2,1fr)}}
 .f .ic{display:block;width:26px;height:26px;color:var(--ac);margin-bottom:8px}
+.invite{display:none;margin:0 0 18px;padding:14px 16px;border-radius:16px;border:1px solid #ffc83d66;background:linear-gradient(135deg,#ffc83d22,transparent);align-items:center;gap:14px;flex-wrap:wrap}
+.invite.on{display:flex}.invite b{font-size:16px}.invite p{margin:2px 0 0;color:var(--mu);font-size:14px}
+.invite code{font:800 22px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em;padding:8px 12px;border:2px dashed var(--ac);border-radius:10px;color:var(--tx);background:none}
+.invite button{background:var(--ac);color:var(--ac-tx);border:0;border-radius:10px;padding:9px 14px;font-weight:700;cursor:pointer}
 </style>
 </head>
 <body>
@@ -139,6 +143,7 @@ section.games{border-top:1px solid #ffc83d40;background:radial-gradient(120% 80%
     <a class="app" href="https://gaelbodevin-bit.github.io/bobine/">Open the web app →</a>
   </header>
 
+  <div class="invite" id="invite" role="status"><div><b>A friend invited you to Playwatch 🎁</b><p>Install the app, create your account, then enter this code in <b>Profile → Invite friends</b>.</p></div><code id="invcode"></code><button type="button" id="invcopy">Copy</button></div>
   <div class="hero">
     <div>
       <span class="kicker">TV shows · Movies · Video games</span>
@@ -263,6 +268,15 @@ var PLAY_URL = "https://play.google.com/store/apps/details?id=com.bluecellproduc
   var html = PLAY_LIVE
     ? '<a class="btn pri" href="' + PLAY_URL + '">' + icon + 'Get it on Google Play</a><a class="btn ghost" href="https://gaelbodevin-bit.github.io/bobine/">Web version</a>'
     : '<span class="btn soon">' + icon + 'Coming soon to Google Play</span><a class="btn ghost" href="https://gaelbodevin-bit.github.io/bobine/">Try the web version</a>';
+  var ref = (location.search.match(/[?&]ref=([A-Za-z0-9]{4,12})/) || [])[1];
+  if (ref) {
+    ref = ref.toUpperCase();
+    document.getElementById("invcode").textContent = ref;
+    document.getElementById("invite").classList.add("on");
+    document.getElementById("invcopy").onclick = function () { var b = this; (navigator.clipboard ? navigator.clipboard.writeText(ref) : Promise.reject()).then(function () { b.textContent = "Copied ✓"; }).catch(function () { }); };
+    html = html.split("https://gaelbodevin-bit.github.io/bobine/").join("https://gaelbodevin-bit.github.io/bobine/?ref=" + ref)
+               .split(PLAY_URL).join(PLAY_URL.replace("utm_medium%3D", "utm_campaign%3Dref-" + ref + "%26utm_medium%3D"));
+  }
   var els = document.querySelectorAll("[data-play]");
   for (var i = 0; i < els.length; i++) els[i].innerHTML = html;
 })();
